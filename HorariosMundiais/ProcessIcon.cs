@@ -54,10 +54,12 @@ namespace HorariosMundiais
             ni.Visible = true;
 
 
+#if !DEBUG    
             ni.BalloonTipIcon = ToolTipIcon.Info;
             ni.BalloonTipTitle = ConfigHelper.RetornaVersao();
             ni.BalloonTipText = "Aplicativo de relógios iniciado";
             ni.ShowBalloonTip(1500);
+#endif
 
             // Attach a context menu.
             ni.ContextMenuStrip = new ContextMenus().Create();

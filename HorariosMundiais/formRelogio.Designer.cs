@@ -40,15 +40,16 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsMenuHorarioVersao = new System.Windows.Forms.ToolStripMenuItem();
             this.tsOcultarSegundos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsAjusteTamanhoJanela = new System.Windows.Forms.ToolStripMenuItem();
             this.lblHoraAtual = new System.Windows.Forms.Label();
             this.lblProximoAbertura = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAbertura = new System.Windows.Forms.Button();
+            this.btnFechamento = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNomeBolsa = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.picBandeira = new System.Windows.Forms.PictureBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,7 +120,8 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsMenuHorarioVersao,
-            this.tsOcultarSegundos});
+            this.tsOcultarSegundos,
+            this.tsAjusteTamanhoJanela});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
@@ -135,6 +137,12 @@
             this.tsOcultarSegundos.Name = "tsOcultarSegundos";
             resources.ApplyResources(this.tsOcultarSegundos, "tsOcultarSegundos");
             // 
+            // tsAjusteTamanhoJanela
+            // 
+            this.tsAjusteTamanhoJanela.Image = global::HorariosMundiais.Properties.Resources.maximizar;
+            this.tsAjusteTamanhoJanela.Name = "tsAjusteTamanhoJanela";
+            resources.ApplyResources(this.tsAjusteTamanhoJanela, "tsAjusteTamanhoJanela");
+            // 
             // lblHoraAtual
             // 
             this.lblHoraAtual.ContextMenuStrip = this.contextMenuStrip1;
@@ -149,23 +157,25 @@
             this.lblProximoAbertura.Name = "lblProximoAbertura";
             this.lblProximoAbertura.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formRelogio_MouseDown);
             // 
-            // button1
+            // btnAbertura
             // 
-            this.button1.ContextMenuStrip = this.contextMenuStrip1;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Name = "button1";
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAbertura.ContextMenuStrip = this.contextMenuStrip1;
+            resources.ApplyResources(this.btnAbertura, "btnAbertura");
+            this.btnAbertura.FlatAppearance.BorderSize = 0;
+            this.btnAbertura.Name = "btnAbertura";
+            this.btnAbertura.TabStop = false;
+            this.btnAbertura.UseVisualStyleBackColor = true;
+            this.btnAbertura.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formRelogio_MouseDown);
             // 
-            // button2
+            // btnFechamento
             // 
-            this.button2.ContextMenuStrip = this.contextMenuStrip1;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Name = "button2";
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFechamento.ContextMenuStrip = this.contextMenuStrip1;
+            resources.ApplyResources(this.btnFechamento, "btnFechamento");
+            this.btnFechamento.FlatAppearance.BorderSize = 0;
+            this.btnFechamento.Name = "btnFechamento";
+            this.btnFechamento.TabStop = false;
+            this.btnFechamento.UseVisualStyleBackColor = true;
+            this.btnFechamento.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formRelogio_MouseDown);
             // 
             // panel1
             // 
@@ -187,6 +197,12 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // picBandeira
+            // 
+            resources.ApplyResources(this.picBandeira, "picBandeira");
+            this.picBandeira.Name = "picBandeira";
+            this.picBandeira.TabStop = false;
+            // 
             // lblStatus
             // 
             this.lblStatus.ContextMenuStrip = this.contextMenuStrip1;
@@ -194,30 +210,25 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblStatus.Name = "lblStatus";
             // 
-            // picBandeira
-            // 
-            resources.ApplyResources(this.picBandeira, "picBandeira");
-            this.picBandeira.Name = "picBandeira";
-            this.picBandeira.TabStop = false;
-            // 
             // formRelogio
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btnFechamento);
+            this.Controls.Add(this.btnAbertura);
             this.Controls.Add(this.lblProximoAbertura);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblHoraAtual);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
             this.Name = "formRelogio";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Shown += new System.EventHandler(this.formRelogio_Shown);
             this.ResizeEnd += new System.EventHandler(this.formRelogio_ResizeEnd);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.formRelogio_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formRelogio_MouseDown);
             this.pnlMenu.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -237,8 +248,8 @@
         private System.Windows.Forms.Button btnFormSize;
         private System.Windows.Forms.Label lblHoraAtual;
         private System.Windows.Forms.Label lblProximoAbertura;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAbertura;
+        private System.Windows.Forms.Button btnFechamento;
         private System.Windows.Forms.Button btnTrash;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsMenuHorarioVersao;
@@ -248,6 +259,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picBandeira;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.ToolStripMenuItem tsAjusteTamanhoJanela;
     }
 }
 

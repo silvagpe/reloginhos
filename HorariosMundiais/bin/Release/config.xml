@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Versao>1.0.0.1</Versao>
+  <Versao>1.0.0.2</Versao>
   <Relogios Sigla="BM&amp;F" Bandeira="br" NomeBolsa="Brazilian Stock Exchange" GMT="-3" Abertura="09:00" Fechamento="18:00" HorarioVerao="true" FormCompacto="false" Top="1" Left="1801" Height="117" Width="125" OcultarSegundos="true" />
   <Relogios Sigla="NYSE" Bandeira="us" NomeBolsa="New York Stock Exchange" GMT="-5" Abertura="09:30" Fechamento="16:00" HorarioVerao="false" FormCompacto="false" Top="110" Left="1802" Height="115" Width="124" OcultarSegundos="true" />
-  <Relogios Sigla="LSE" Bandeira="gb" NomeBolsa="London Stock Exchange" GMT="0" Abertura="08:00" Fechamento="16:30" HorarioVerao="false" FormCompacto="false" Top="219" Left="1803" Height="110" Width="125" OcultarSegundos="true" />
-  <Relogios Sigla="JPX" Bandeira="jp" NomeBolsa="Tokyo Stock Exchange" GMT="9" Abertura="09:00" Fechamento="15:00" HorarioVerao="false" FormCompacto="false" Top="323" Left="1803" Height="114" Width="126" OcultarSegundos="true" />
+  <Relogios Sigla="LSE" Bandeira="gb" NomeBolsa="London Stock Exchange" GMT="0" Abertura="08:00" Fechamento="16:30" HorarioVerao="false" FormCompacto="false" Top="218" Left="1800" Height="110" Width="125" OcultarSegundos="true" />
+  <Relogios Sigla="JPX" Bandeira="jp" NomeBolsa="Tokyo Stock Exchange" GMT="9" Abertura="09:00" Fechamento="15:00" HorarioVerao="false" FormCompacto="true" Top="321" Left="1800" Height="115" Width="125" OcultarSegundos="true" />
 </Config>

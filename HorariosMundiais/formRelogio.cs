@@ -38,10 +38,10 @@ namespace HorariosMundiais
 
         #endregion
 
-        public const int ALTURA_COMPACTO = 110;
-        public const int ALTURA_NORMAL = 220;
+        public const int ALTURA_COMPACTO = 115;
+        public const int ALTURA_NORMAL = 180;
 
-        public const int LAGURA_NORMAL = 180;
+        public const int LAGURA_NORMAL = 140;
 
 
 
@@ -70,7 +70,15 @@ namespace HorariosMundiais
 
             tsMenuHorarioVersao.Click += TsMenuHorarioVersao_Click;
             tsOcultarSegundos.Click += TsOcultarSegundos_Click;
+            tsAjusteTamanhoJanela.Click += TsAjusteTamanhoJanela_Click;
 
+        }
+
+        private void TsAjusteTamanhoJanela_Click(object sender, EventArgs e)
+        {
+            AlterarTamanhoForm(!formCompacto);
+
+            SalvarRelogio();
         }
 
         private void TsOcultarSegundos_Click(object sender, EventArgs e)
@@ -107,12 +115,16 @@ namespace HorariosMundiais
             this.abertura = TimeSpan.Parse(relogioXML.Abertura);
             this.fechamento = TimeSpan.Parse(relogioXML.Fechamento);
 
+            btnAbertura.Text = this.abertura.ToString();
+            btnFechamento.Text = this.fechamento.ToString();
 
             this.Top = relogioXML.Top;
             this.Left = relogioXML.Left;
             this.Height = relogioXML.Height;
             this.Width = relogioXML.Width;
             this.ocultarSegundos = relogioXML.OcultarSegundos;
+
+            new ToolTip().SetToolTip(this.lblNomeBolsa, relogioXML.NomeBolsa);
         }
 
 
@@ -159,29 +171,40 @@ namespace HorariosMundiais
 
                 if (dataGMT < dtAbertura)
                 {
-                    lblStatus.Text = "FECHADO";
-                    lblStatus.ForeColor = Color.Red;
+                    MercadoFechado();
                     timeSaldo = dtAbertura.Subtract(dataGMT);
 
                     lblProximoAbertura.Text = string.Format("{0} : {1} : {2} : {3}", timeSaldo.Days, timeSaldo.Hours, timeSaldo.Minutes, timeSaldo.Seconds);
                 }
                 else if (dataGMT > dtAbertura && dataGMT < dtFechamento)
                 {
-                    lblStatus.Text = "ABERTO";
-                    lblStatus.ForeColor = Color.Green;
-
+                    MercadoAberto();
                     timeSaldo = dtFechamento.Subtract(dataGMT);
 
                     lblProximoAbertura.Text = string.Format("{0} : {1} : {2} : {3}", timeSaldo.Days, timeSaldo.Hours, timeSaldo.Minutes, timeSaldo.Seconds);
                 }
                 else
                 {
+                    MercadoFechado();
                     calcularProximoDiaUtil(dataGMT, dtFechamento);
                 }
 
                                 
             }            
         }
+
+        private void MercadoFechado()
+        {
+            lblStatus.Text = "FECHADO";
+            lblStatus.ForeColor = Color.Red;
+        }
+
+        private void MercadoAberto()
+        {
+            lblStatus.Text = "ABERTO";
+            lblStatus.ForeColor = Color.Green;
+        }
+
 
         private void calcularProximoDiaUtil(DateTime dataGMT, DateTime dtFechamento)
         {
@@ -262,12 +285,15 @@ namespace HorariosMundiais
             {
                 this.Height = ALTURA_COMPACTO;
                 this.btnFormSize.Image = Properties.Resources.maximizar;
+                tsAjusteTamanhoJanela.Image = Properties.Resources.maximizar;
                 formCompacto = tipoSimples;
             }
             else
             {
                 this.Height = ALTURA_NORMAL;
+                this.Width = LAGURA_NORMAL;
                 this.btnFormSize.Image = Properties.Resources.minimizar;
+                tsAjusteTamanhoJanela.Image = Properties.Resources.minimizar;
                 formCompacto = tipoSimples;
             }            
         }
@@ -295,14 +321,6 @@ namespace HorariosMundiais
         {
             ConfigHelper.ExcluirRelogio(relogioXML);
             this.Close();
-        }
-
-        private void formRelogio_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                pnlMenu.Visible = !pnlMenu.Visible;
-            }
         }
     }
 }

@@ -13,3 +13,17 @@ D:\Projeto\TraderTime\HorariosMundiais\HorariosMundiais\obj\Release\HorariosMund
 D:\Projeto\TraderTime\HorariosMundiais\HorariosMundiais\obj\Release\pt-BR\HorariosMundiais.resources.dll
 D:\Projeto\TraderTime\HorariosMundiais\HorariosMundiais\obj\Release\HorariosMundiais.exe
 D:\Projeto\TraderTime\HorariosMundiais\HorariosMundiais\obj\Release\HorariosMundiais.pdb
+D:\Projeto\reloginhos\HorariosMundiais\bin\Release\HorariosMundiais.exe.config
+D:\Projeto\reloginhos\HorariosMundiais\bin\Release\HorariosMundiais.exe
+D:\Projeto\reloginhos\HorariosMundiais\bin\Release\HorariosMundiais.pdb
+D:\Projeto\reloginhos\HorariosMundiais\bin\Release\pt-BR\HorariosMundiais.resources.dll
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.flags.Resource_Flags.resources
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.formCadastro.resources
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.formRelogio.resources
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.Properties.Resources.resources
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.formRelogio.pt-BR.resources
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.csproj.GenerateResource.Cache
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.csproj.CoreCompileInputs.cache
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\pt-BR\HorariosMundiais.resources.dll
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.exe
+D:\Projeto\reloginhos\HorariosMundiais\obj\Release\HorariosMundiais.pdb
