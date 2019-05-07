@@ -16,6 +16,7 @@ namespace HorariosMundiais
 {
     public partial class formCadastro : Form
     {
+        //Teste de implementação na branch1
         public formCadastro()
         {
             InitializeComponent();
