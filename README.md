@@ -2,6 +2,8 @@ Esse é um aplicativo livre para acompanhar os horários de abertura, fechamento
 
 Para fazer download é só clicar no arquivo "Reloginhos.zip" e depois download.
 
+Revisão: 1.0.0.3
+- Ajuste na função ocultar segundos. Agora exibe os texto Ocultar/Mostrar
 
 Revisão: 1.0.0.2
 - Ajuste no texto da hora de abertura e fechamento.
